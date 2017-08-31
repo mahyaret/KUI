@@ -7,9 +7,9 @@ To compile the code, you need the following libraries:
 - NI-DAQmx
 - Phidgets21 Libraries
 # Wiki
-Get started here:
-https://github.com/mahyaret/KUKA-UI/wiki/Get-Started!
-Check the Wiki page for understanding functions details:
+- Get started here:
+https://github.com/mahyaret/KUKA-UI/wiki/Get-Started
+- Check the Wiki page for understanding functions details:
 https://github.com/mahyaret/KUKA-UI/wiki
 # News and Updates
 http://www.etedal.net/p/kuka.html
