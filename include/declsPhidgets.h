@@ -38,6 +38,7 @@
 /* For more info and how to use this software, visit: http://www.etedal.net/p/kuka.html */
 
 struct phidgetsVec{
+	int serialNumber;
 	float ch0;
 	float ch1;
 	float ch2;

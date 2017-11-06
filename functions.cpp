@@ -205,6 +205,7 @@ String ^readFromDataGridView(DataGridView ^DataView){
 }
 System::String ^loadFromFile(System::String ^Addr, int &count){
 	String^ string;
+	count = 0;
 	try
 	{
 		//Console::WriteLine("trying to open file {0}...", Addr);
@@ -220,7 +221,7 @@ System::String ^loadFromFile(System::String ^Addr, int &count){
 	}
 	catch (Exception^ e)
 	{
-		MessageBox::Show("ERROR");
+		MessageBox::Show("Error in reading configuration file.");
 	}
 
 	return string;

@@ -45,7 +45,6 @@
 #pragma managed(pop)
 #include <phidget21.h>
 
-
 //! A normal member taking two arguments and returning an integer value.
 /*!
 \param a an integer argument.
@@ -136,6 +135,12 @@ void runPhidgets(System::ComponentModel::BackgroundWorker^ workerPhidgets, float
 	CPhidget_set_OnDetach_Handler((CPhidgetHandle)bridge, DetachHandler, NULL);
 	CPhidget_set_OnError_Handler((CPhidgetHandle)bridge, ErrorHandler, NULL);
 	CPhidget_open((CPhidgetHandle)bridge, -1);
+
+
+
+
+
+
 
 		//Wait for 10 seconds, otherwise exit
 		if(result = CPhidget_waitForAttachment((CPhidgetHandle)bridge, 10000))

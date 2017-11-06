@@ -74,3 +74,36 @@
 
 #define CALMAT 8
 #define LOADCELLS 4
+
+#define POSE "configuration/pose.txt"
+#define TOOL "configuration/tool.txt"
+#define CALIBRATION "configuration/calibration.txt"
+#define PID "configuration/PID.txt"
+#define SEPARATOR ","
+
+#define KUKA_POSE_PAUSE "Pause"
+#define KUKA_POSE_GO "Go!"
+#define STATSTRING "timestamp = {0}; state = {1}; quality = {2}; desiredMsrSampleTime = {3}; desiredCmdSampleTime = {4}; safetyLimits = {5}; KUKA Command={6}"
+#define FRI_CONTROL_MODE_NA "CTRL N/A"
+#define FRI_CONTROL_MODE_POSITION "Position"
+#define FRI_CONTROL_MODE_CARTIMP "CartImp"
+#define FRI_CONTROL_MODE_JNTIMP "JntImp"
+#define FRI_CONTROL_MODE_OTHER "Other"
+#define FRI_CONTROL_MODE_UNKNOWN "Unknown"
+#define START_LOGGING "Start Logging"
+#define STOP_LOGGING "Stop Logging"
+
+#define ATI_ERROR_00 "ERROR reading ATI. \n - Make sure controller buad rate is set to 115200. \n - Make sure the sensor is not saturated."
+#define START_ATI "startATI"
+#define STOP_ATI "stopATI"
+
+#define START_NI "startNI"
+#define STOP_NI "stopNI"
+
+#define START_PHIDGETS "startPhidgets"
+#define STOP_PHIDGETS "stopPhidgets"
+
+#define START_SIMULINK "startSimulink"
+#define STOP_SIMULINK "stopSimulink"
+
+#define ABOUT "Author: Mahyar Abdeetedal\nCopyright(C) 2016 - 2017 Mahyar Abdeetedal\nEmail: mahyar.etedal@icloud.com\nFor more info and how to use this software, visit: http://www.etedal.net/p/kuka.html"

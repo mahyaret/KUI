@@ -181,10 +181,10 @@ namespace GuiCartTrajGrp {
 	private: System::Windows::Forms::Label^  lblFreqNiLabel;
 	private: System::Windows::Forms::Button^  btnSaveClibration;
 	private: System::Windows::Forms::DataGridView^  calDataView;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn11;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn12;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn13;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn14;
+
+
+
+
 	private: System::Windows::Forms::GroupBox^  grpATI;
 	private: System::Windows::Forms::Label^  lblTz;
 	private: System::Windows::Forms::Label^  lblTy;
@@ -208,19 +208,19 @@ namespace GuiCartTrajGrp {
 	private: System::Windows::Forms::Label^  lblMaxForceLabel;
 	private: System::Windows::Forms::TextBox^  txtMaxPos;
 	private: System::Windows::Forms::Label^  lblMaxPosLabel;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn5;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn6;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn7;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn8;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  gripper;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn4;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn9;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn10;
+
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^  btnPose;
 	private: System::Windows::Forms::OpenFileDialog^  openPoseFile;
 	private: System::Windows::Forms::CheckBox^  chkManual;
@@ -231,12 +231,78 @@ namespace GuiCartTrajGrp {
 	private: System::Windows::Forms::Button^  btnSimulinkStart;
 	private: System::Windows::Forms::Button^  btnPIDSave;
 	private: System::Windows::Forms::DataGridView^  PIDDataView;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn15;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn16;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn17;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn18;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
+
+
+
+
+
 	private: System::Windows::Forms::CheckBox^  chkLoop;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewX;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewY;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewZ;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewA;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewB;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewC;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  msrCartPosDataViewOpenClose;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewX;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewY;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewZ;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewA;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewB;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewC;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewLoadCell;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKp;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKd;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKi;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewQ;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell0;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNumber;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -282,13 +348,6 @@ namespace GuiCartTrajGrp {
 			this->lblTrackX = (gcnew System::Windows::Forms::Label());
 			this->lblTrackA = (gcnew System::Windows::Forms::Label());
 			this->msrCartPosDataView = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->gripper = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnGo = (gcnew System::Windows::Forms::Button());
 			this->lblSpeed = (gcnew System::Windows::Forms::Label());
 			this->trackBarSpeed = (gcnew System::Windows::Forms::TrackBar());
@@ -311,12 +370,6 @@ namespace GuiCartTrajGrp {
 			this->lblToolXm = (gcnew System::Windows::Forms::Label());
 			this->btnSaveTool = (gcnew System::Windows::Forms::Button());
 			this->toolDataView = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnRst = (gcnew System::Windows::Forms::Button());
 			this->btnStartStopNi = (gcnew System::Windows::Forms::Button());
 			this->btnOpenGripper = (gcnew System::Windows::Forms::Button());
@@ -325,11 +378,6 @@ namespace GuiCartTrajGrp {
 			this->btnStartStopPhidgets = (gcnew System::Windows::Forms::Button());
 			this->grpNi = (gcnew System::Windows::Forms::GroupBox());
 			this->PIDDataView = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn15 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn16 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn17 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnPIDSave = (gcnew System::Windows::Forms::Button());
 			this->lblCurrentLabel = (gcnew System::Windows::Forms::Label());
 			this->chkManual = (gcnew System::Windows::Forms::CheckBox());
@@ -347,10 +395,6 @@ namespace GuiCartTrajGrp {
 			this->grpLoadCells = (gcnew System::Windows::Forms::GroupBox());
 			this->btnSaveClibration = (gcnew System::Windows::Forms::Button());
 			this->calDataView = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn13 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn14 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->lblFreq = (gcnew System::Windows::Forms::Label());
 			this->lblFreqLabel = (gcnew System::Windows::Forms::Label());
 			this->lblCh3 = (gcnew System::Windows::Forms::Label());
@@ -384,6 +428,29 @@ namespace GuiCartTrajGrp {
 			this->grpLog = (gcnew System::Windows::Forms::GroupBox());
 			this->grpSimulink = (gcnew System::Windows::Forms::GroupBox());
 			this->btnSimulinkStart = (gcnew System::Windows::Forms::Button());
+			this->toolDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewOpenClose = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKd = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewQ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell0 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewSerialNumber = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->msrCartPosDataView))->BeginInit();
@@ -691,9 +758,9 @@ namespace GuiCartTrajGrp {
 			this->msrCartPosDataView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->msrCartPosDataView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->msrCartPosDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
-				this->dataGridViewTextBoxColumn5,
-					this->Column1, this->Column2, this->dataGridViewTextBoxColumn6, this->dataGridViewTextBoxColumn7, this->dataGridViewTextBoxColumn8,
-					this->gripper
+				this->msrCartPosDataViewX,
+					this->msrCartPosDataViewY, this->msrCartPosDataViewZ, this->msrCartPosDataViewA, this->msrCartPosDataViewB, this->msrCartPosDataViewC,
+					this->msrCartPosDataViewOpenClose
 			});
 			this->msrCartPosDataView->Location = System::Drawing::Point(4, 282);
 			this->msrCartPosDataView->Margin = System::Windows::Forms::Padding(2);
@@ -702,45 +769,6 @@ namespace GuiCartTrajGrp {
 			this->msrCartPosDataView->RowTemplate->Height = 28;
 			this->msrCartPosDataView->Size = System::Drawing::Size(759, 114);
 			this->msrCartPosDataView->TabIndex = 27;
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this->dataGridViewTextBoxColumn5->HeaderText = L"X (mm)";
-			this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
-			this->dataGridViewTextBoxColumn5->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Y (mm)";
-			this->Column1->Name = L"Column1";
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Z (mm)";
-			this->Column2->Name = L"Column2";
-			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this->dataGridViewTextBoxColumn6->HeaderText = L"A (deg)";
-			this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
-			this->dataGridViewTextBoxColumn6->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn7
-			// 
-			this->dataGridViewTextBoxColumn7->HeaderText = L"B (deg)";
-			this->dataGridViewTextBoxColumn7->Name = L"dataGridViewTextBoxColumn7";
-			this->dataGridViewTextBoxColumn7->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this->dataGridViewTextBoxColumn8->HeaderText = L"C (deg)";
-			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-			this->dataGridViewTextBoxColumn8->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// gripper
-			// 
-			this->gripper->HeaderText = L"open/close";
-			this->gripper->Name = L"gripper";
 			// 
 			// btnGo
 			// 
@@ -962,9 +990,8 @@ namespace GuiCartTrajGrp {
 			this->toolDataView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->toolDataView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->toolDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
-				this->dataGridViewTextBoxColumn1,
-					this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewTextBoxColumn9,
-					this->dataGridViewTextBoxColumn10
+				this->toolDataViewX,
+					this->toolDataViewY, this->toolDataViewZ, this->toolDataViewA, this->toolDataViewB, this->toolDataViewC
 			});
 			this->toolDataView->Location = System::Drawing::Point(256, 207);
 			this->toolDataView->Margin = System::Windows::Forms::Padding(2);
@@ -973,40 +1000,6 @@ namespace GuiCartTrajGrp {
 			this->toolDataView->RowTemplate->Height = 28;
 			this->toolDataView->Size = System::Drawing::Size(507, 71);
 			this->toolDataView->TabIndex = 53;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this->dataGridViewTextBoxColumn1->HeaderText = L"X (mm)";
-			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
-			this->dataGridViewTextBoxColumn1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this->dataGridViewTextBoxColumn2->HeaderText = L"Y (mm)";
-			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this->dataGridViewTextBoxColumn3->HeaderText = L"Z (mm)";
-			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this->dataGridViewTextBoxColumn4->HeaderText = L"A (deg)";
-			this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
-			this->dataGridViewTextBoxColumn4->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn9
-			// 
-			this->dataGridViewTextBoxColumn9->HeaderText = L"B (deg)";
-			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
-			this->dataGridViewTextBoxColumn9->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn10
-			// 
-			this->dataGridViewTextBoxColumn10->HeaderText = L"C (deg)";
-			this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
-			this->dataGridViewTextBoxColumn10->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// btnRst
 			// 
@@ -1111,8 +1104,8 @@ namespace GuiCartTrajGrp {
 			this->PIDDataView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->PIDDataView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->PIDDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
-				this->dataGridViewTextBoxColumn15,
-					this->dataGridViewTextBoxColumn16, this->dataGridViewTextBoxColumn17, this->dataGridViewTextBoxColumn18, this->Column3
+				this->PIDDataViewLoadCell,
+					this->PIDDataViewKp, this->PIDDataViewKd, this->PIDDataViewKi, this->PIDDataViewQ
 			});
 			this->PIDDataView->Location = System::Drawing::Point(90, 92);
 			this->PIDDataView->Margin = System::Windows::Forms::Padding(2);
@@ -1121,33 +1114,6 @@ namespace GuiCartTrajGrp {
 			this->PIDDataView->RowTemplate->Height = 28;
 			this->PIDDataView->Size = System::Drawing::Size(313, 51);
 			this->PIDDataView->TabIndex = 72;
-			// 
-			// dataGridViewTextBoxColumn15
-			// 
-			this->dataGridViewTextBoxColumn15->HeaderText = L"Load Cell";
-			this->dataGridViewTextBoxColumn15->Name = L"dataGridViewTextBoxColumn15";
-			this->dataGridViewTextBoxColumn15->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn16
-			// 
-			this->dataGridViewTextBoxColumn16->HeaderText = L"Kp";
-			this->dataGridViewTextBoxColumn16->Name = L"dataGridViewTextBoxColumn16";
-			// 
-			// dataGridViewTextBoxColumn17
-			// 
-			this->dataGridViewTextBoxColumn17->HeaderText = L"Kd";
-			this->dataGridViewTextBoxColumn17->Name = L"dataGridViewTextBoxColumn17";
-			// 
-			// dataGridViewTextBoxColumn18
-			// 
-			this->dataGridViewTextBoxColumn18->HeaderText = L"Ki";
-			this->dataGridViewTextBoxColumn18->Name = L"dataGridViewTextBoxColumn18";
-			this->dataGridViewTextBoxColumn18->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Q";
-			this->Column3->Name = L"Column3";
 			// 
 			// btnPIDSave
 			// 
@@ -1353,39 +1319,17 @@ namespace GuiCartTrajGrp {
 			this->calDataView->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
 			this->calDataView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->calDataView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->calDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-				this->dataGridViewTextBoxColumn11,
-					this->dataGridViewTextBoxColumn12, this->dataGridViewTextBoxColumn13, this->dataGridViewTextBoxColumn14
+			this->calDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->calDataViewLoadCell0,
+					this->calDataViewLoadCell1, this->calDataViewLoadCell2, this->calDataViewLoadCell3, this->calDataViewSerialNumber
 			});
 			this->calDataView->Location = System::Drawing::Point(7, 80);
 			this->calDataView->Margin = System::Windows::Forms::Padding(2);
 			this->calDataView->Name = L"calDataView";
 			this->calDataView->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::DisableResizing;
 			this->calDataView->RowTemplate->Height = 28;
-			this->calDataView->Size = System::Drawing::Size(396, 105);
+			this->calDataView->Size = System::Drawing::Size(396, 73);
 			this->calDataView->TabIndex = 70;
-			// 
-			// dataGridViewTextBoxColumn11
-			// 
-			this->dataGridViewTextBoxColumn11->HeaderText = L"Load Cell 0";
-			this->dataGridViewTextBoxColumn11->Name = L"dataGridViewTextBoxColumn11";
-			this->dataGridViewTextBoxColumn11->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// dataGridViewTextBoxColumn12
-			// 
-			this->dataGridViewTextBoxColumn12->HeaderText = L"Load Cell 1";
-			this->dataGridViewTextBoxColumn12->Name = L"dataGridViewTextBoxColumn12";
-			// 
-			// dataGridViewTextBoxColumn13
-			// 
-			this->dataGridViewTextBoxColumn13->HeaderText = L"Load Cell 2";
-			this->dataGridViewTextBoxColumn13->Name = L"dataGridViewTextBoxColumn13";
-			// 
-			// dataGridViewTextBoxColumn14
-			// 
-			this->dataGridViewTextBoxColumn14->HeaderText = L"Load Cell 3";
-			this->dataGridViewTextBoxColumn14->Name = L"dataGridViewTextBoxColumn14";
-			this->dataGridViewTextBoxColumn14->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// lblFreq
 			// 
@@ -1703,6 +1647,146 @@ namespace GuiCartTrajGrp {
 			this->btnSimulinkStart->UseVisualStyleBackColor = true;
 			this->btnSimulinkStart->Click += gcnew System::EventHandler(this, &mainForm::btnSimulinkStart_Click);
 			// 
+			// toolDataViewX
+			// 
+			this->toolDataViewX->HeaderText = L"X (mm)";
+			this->toolDataViewX->Name = L"toolDataViewX";
+			this->toolDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewY
+			// 
+			this->toolDataViewY->HeaderText = L"Y (mm)";
+			this->toolDataViewY->Name = L"toolDataViewY";
+			this->toolDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewZ
+			// 
+			this->toolDataViewZ->HeaderText = L"Z (mm)";
+			this->toolDataViewZ->Name = L"toolDataViewZ";
+			this->toolDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewA
+			// 
+			this->toolDataViewA->HeaderText = L"A (deg)";
+			this->toolDataViewA->Name = L"toolDataViewA";
+			this->toolDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewB
+			// 
+			this->toolDataViewB->HeaderText = L"B (deg)";
+			this->toolDataViewB->Name = L"toolDataViewB";
+			this->toolDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewC
+			// 
+			this->toolDataViewC->HeaderText = L"C (deg)";
+			this->toolDataViewC->Name = L"toolDataViewC";
+			this->toolDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewX
+			// 
+			this->msrCartPosDataViewX->HeaderText = L"X (mm)";
+			this->msrCartPosDataViewX->Name = L"msrCartPosDataViewX";
+			this->msrCartPosDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewY
+			// 
+			this->msrCartPosDataViewY->HeaderText = L"Y (mm)";
+			this->msrCartPosDataViewY->Name = L"msrCartPosDataViewY";
+			this->msrCartPosDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewZ
+			// 
+			this->msrCartPosDataViewZ->HeaderText = L"Z (mm)";
+			this->msrCartPosDataViewZ->Name = L"msrCartPosDataViewZ";
+			this->msrCartPosDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewA
+			// 
+			this->msrCartPosDataViewA->HeaderText = L"A (deg)";
+			this->msrCartPosDataViewA->Name = L"msrCartPosDataViewA";
+			this->msrCartPosDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewB
+			// 
+			this->msrCartPosDataViewB->HeaderText = L"B (deg)";
+			this->msrCartPosDataViewB->Name = L"msrCartPosDataViewB";
+			this->msrCartPosDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewC
+			// 
+			this->msrCartPosDataViewC->HeaderText = L"C (deg)";
+			this->msrCartPosDataViewC->Name = L"msrCartPosDataViewC";
+			this->msrCartPosDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewOpenClose
+			// 
+			this->msrCartPosDataViewOpenClose->HeaderText = L"open/close";
+			this->msrCartPosDataViewOpenClose->Name = L"msrCartPosDataViewOpenClose";
+			this->msrCartPosDataViewOpenClose->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewLoadCell
+			// 
+			this->PIDDataViewLoadCell->HeaderText = L"Load Cell";
+			this->PIDDataViewLoadCell->Name = L"PIDDataViewLoadCell";
+			this->PIDDataViewLoadCell->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKp
+			// 
+			this->PIDDataViewKp->HeaderText = L"Kp";
+			this->PIDDataViewKp->Name = L"PIDDataViewKp";
+			this->PIDDataViewKp->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKd
+			// 
+			this->PIDDataViewKd->HeaderText = L"Kd";
+			this->PIDDataViewKd->Name = L"PIDDataViewKd";
+			this->PIDDataViewKd->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKi
+			// 
+			this->PIDDataViewKi->HeaderText = L"Ki";
+			this->PIDDataViewKi->Name = L"PIDDataViewKi";
+			this->PIDDataViewKi->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewQ
+			// 
+			this->PIDDataViewQ->HeaderText = L"Q";
+			this->PIDDataViewQ->Name = L"PIDDataViewQ";
+			this->PIDDataViewQ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell0
+			// 
+			this->calDataViewLoadCell0->HeaderText = L"Load Cell 0";
+			this->calDataViewLoadCell0->Name = L"calDataViewLoadCell0";
+			this->calDataViewLoadCell0->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell1
+			// 
+			this->calDataViewLoadCell1->HeaderText = L"Load Cell 1";
+			this->calDataViewLoadCell1->Name = L"calDataViewLoadCell1";
+			this->calDataViewLoadCell1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell2
+			// 
+			this->calDataViewLoadCell2->HeaderText = L"Load Cell 2";
+			this->calDataViewLoadCell2->Name = L"calDataViewLoadCell2";
+			this->calDataViewLoadCell2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell3
+			// 
+			this->calDataViewLoadCell3->HeaderText = L"Load Cell 3";
+			this->calDataViewLoadCell3->Name = L"calDataViewLoadCell3";
+			this->calDataViewLoadCell3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewSerialNumber
+			// 
+			this->calDataViewSerialNumber->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
+			this->calDataViewSerialNumber->HeaderText = L"Serial Number";
+			this->calDataViewSerialNumber->Name = L"calDataViewSerialNumber";
+			this->calDataViewSerialNumber->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->calDataViewSerialNumber->Width = 79;
+			// 
 			// mainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1754,24 +1838,31 @@ namespace GuiCartTrajGrp {
 		mainForm()
 		{
 			InitializeComponent();
-			int count = 0;
-			loadFromFile("configuration/pose.txt", count);
-			for (i = 0; i < count; i++) {
+			int listCount = 0;
+			System::String ^listItem;
+			listItem = loadFromFile(POSE, listCount);
+			for (i = 0; i < listCount; i++) {
 				addRowsToDataView();
 			}
+			writeToDataGridView(msrCartPosDataView, listItem, SEPARATOR);
 
-			writeToDataGridView(msrCartPosDataView, loadFromFile("configuration/pose.txt", count), ",");
+			listItem = loadFromFile(TOOL, listCount);
+			for (i = 0; i < listCount; i++) {
+				this->toolDataView->Rows->Add();
+			}
+			writeToDataGridView(toolDataView, listItem, SEPARATOR);
 
-			this->toolDataView->Rows->Add();
-			this->toolDataView->Rows->Add();
-			writeToDataGridView(toolDataView, loadFromFile("configuration/tool.txt", count), ",");
+			listItem = loadFromFile(CALIBRATION, listCount);
+			for (i = 0; i < listCount; i++) {
+				this->calDataView->Rows->Add();
+			}
+			writeToDataGridView(calDataView, listItem, SEPARATOR);
 
-			this->calDataView->Rows->Add();
-			this->calDataView->Rows->Add();
-			writeToDataGridView(calDataView, loadFromFile("configuration/calibration.txt", count), ",");
-
-			this->PIDDataView->Rows->Add();
-			writeToDataGridView(PIDDataView, loadFromFile("configuration/PID.txt", count), ",");
+			listItem = loadFromFile(PID, listCount);
+			for (i = 0; i < listCount; i++) {
+				this->PIDDataView->Rows->Add();
+			}
+			writeToDataGridView(PIDDataView, listItem, SEPARATOR);
 
 			resetFri(false);
 		}
@@ -1834,7 +1925,7 @@ namespace GuiCartTrajGrp {
 
 
 
-				 this->FRICtrlModeLabel->Text = "CTRL N/A";
+				 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_NA;
 
 
 			 }
@@ -1850,10 +1941,10 @@ namespace GuiCartTrajGrp {
 				 speed = Convert::ToDouble(trackBarSpeed->Value) / 8000;
 
 				 if (trajFlag) {
-					 btnGo->Text = "Pause";
+					 btnGo->Text = KUKA_POSE_PAUSE;
 				 }
 				 else {
-					 btnGo->Text = "Go!";
+					 btnGo->Text = KUKA_POSE_GO;
 				 }
 
 
@@ -1908,14 +1999,14 @@ namespace GuiCartTrajGrp {
 				 if (!updateRequired) { return; }
 
 				 {
-					 System::String ^aString;
-					 aString = gcnew  System::String("");
+					 System::String ^statString;
+					 statString = gcnew  System::String("");
 					 String ^kukaCmdStr;
 					 kukaCmdStr = gcnew  System::String(kukaWriteCommand);
-					 aString = System::String::Format("timestamp = {0}; state = {1}; quality = {2}; desiredMsrSampleTime = {3}; desiredCmdSampleTime = {4}; safetyLimits = {5}; KUKA Command={6}",
+					 statString = System::String::Format(STATSTRING,
 						 msr.intf.timestamp, msr.intf.state, msr.intf.quality, msr.intf.desiredMsrSampleTime, msr.intf.desiredCmdSampleTime, msr.intf.safetyLimits, kukaCmdStr);
-					 aString->Empty;
-					 this->testBoxStatistics->Text = aString;
+					 statString->Empty;
+					 this->testBoxStatistics->Text = statString;
 				 }
 				 /* Quality */
 				 switch (msr.intf.quality)
@@ -1970,19 +2061,19 @@ namespace GuiCartTrajGrp {
 				 switch (msr.robot.control)
 				 {
 				 case FRI_CTRL_POSITION: // 1
-					 this->FRICtrlModeLabel->Text = "Position";
+					 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_POSITION;
 					 break;
 				 case FRI_CTRL_CART_IMP: // 2
-					 this->FRICtrlModeLabel->Text = "CartImp";
+					 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_CARTIMP;
 					 break;
 				 case FRI_CTRL_JNT_IMP: //3 
-					 this->FRICtrlModeLabel->Text = "JntImp";
+					 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_JNTIMP;
 					 break;
 				 case FRI_CTRL_OTHER: // 0
-					 this->FRICtrlModeLabel->Text = "Other";
+					 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_OTHER;
 					 break;
 				 default:
-					 this->FRICtrlModeLabel->Text = "Unknown";
+					 this->FRICtrlModeLabel->Text = FRI_CONTROL_MODE_UNKNOWN;
 
 				 }
 
@@ -2096,13 +2187,13 @@ namespace GuiCartTrajGrp {
 		if (this->FRILogging->IsBusy)
 		{
 			// stop it
-			btnLogging->Text = "Start Logging";
+			btnLogging->Text = START_LOGGING;
 			this->FRILogging->CancelAsync();
 		}
 		else
 		{
 
-			btnLogging->Text = "Stop Logging";
+			btnLogging->Text = STOP_LOGGING;
 			this->FRILogging->RunWorkerAsync();
 
 		}
@@ -2149,8 +2240,8 @@ namespace GuiCartTrajGrp {
 	{
 		updateAtiSensor();
 		if (e->ProgressPercentage == 1) {
-			MessageBox::Show("ERROR reading ATI. \n - Make sure controller buad rate is set to 115200. \n - Make sure the sensor is not saturated.");
-			btnStartATI->Text = "startATI";
+			MessageBox::Show(ATI_ERROR_00);
+			btnStartATI->Text = START_ATI;
 		}
 	}
 	private: System::Void simulink_DoWork(System::Object^  sender, System::ComponentModel::DoWorkEventArgs^  e) {
@@ -2174,14 +2265,14 @@ namespace GuiCartTrajGrp {
 	}
 
 	private: System::Void btnSave_Click(System::Object^  sender, System::EventArgs^  e) {
-		saveToFile(readFromDataGridView(msrCartPosDataView), "pose.txt");
+		saveToFile(readFromDataGridView(msrCartPosDataView), POSE);
 	}
 
 	private: System::Void btnAbout_Click(System::Object^  sender, System::EventArgs^  e) {
-		MessageBox::Show("Author: Mahyar Abdeetedal\nCopyright(C) 2016 - 2017 Mahyar Abdeetedal\nEmail: mahyar.etedal@icloud.com\nFor more info and how to use this software, visit: http://www.etedal.net/p/kuka.html");
+		MessageBox::Show(ABOUT);
 	}
 	private: System::Void btnSaveTool_Click(System::Object^  sender, System::EventArgs^  e) {
-		saveToFile(readFromDataGridView(toolDataView), "tool.txt");
+		saveToFile(readFromDataGridView(toolDataView), TOOL);
 	}
 	private: System::Void btnRst_Click(System::Object^  sender, System::EventArgs^  e) {
 		trajFlag = false;
@@ -2194,13 +2285,13 @@ namespace GuiCartTrajGrp {
 		{
 			// stop it
 			kill(tsk);
-			btnStartStopNi->Text = "startNI";
+			btnStartStopNi->Text = START_NI;
 			this->ni->CancelAsync();
 		}
 		else
 		{
 
-			btnStartStopNi->Text = "stopNI";
+			btnStartStopNi->Text = STOP_NI;
 			this->ni->RunWorkerAsync();
 		}
 
@@ -2218,13 +2309,13 @@ namespace GuiCartTrajGrp {
 		{
 			// stop it
 			killPhidgets(bridge);
-			btnStartStopPhidgets->Text = "startPhidgets";
+			btnStartStopPhidgets->Text = START_PHIDGETS;
 			this->phidgets->CancelAsync();
 		}
 		else
 		{
 
-			btnStartStopPhidgets->Text = "stopPhidgets";
+			btnStartStopPhidgets->Text = STOP_PHIDGETS;
 			this->phidgets->RunWorkerAsync();
 
 		}
@@ -2232,7 +2323,7 @@ namespace GuiCartTrajGrp {
 
 
 	private: System::Void btnSaveClibration_Click(System::Object^  sender, System::EventArgs^  e) {
-		saveToFile(readFromDataGridView(calDataView), "calibration.txt");
+		saveToFile(readFromDataGridView(calDataView), CALIBRATION);
 	}
 	private: System::Void btnStartATI_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -2240,14 +2331,14 @@ namespace GuiCartTrajGrp {
 		{
 			// stop it
 			killAti(comPort);
-			btnStartATI->Text = "startATI";
+			btnStartATI->Text = START_ATI;
 			btnBias->Enabled = TRUE;
 			this->atiSensor->CancelAsync();
 		}
 		else
 		{
 
-			btnStartATI->Text = "stopATI";
+			btnStartATI->Text = STOP_ATI;
 			btnBias->Enabled = FALSE;
 			this->atiSensor->RunWorkerAsync();
 
@@ -2267,7 +2358,7 @@ namespace GuiCartTrajGrp {
 			for (i = 0; i < count; i++) {
 				addRowsToDataView();
 			}
-			writeToDataGridView(msrCartPosDataView, loadFromFile(openPoseFile->FileName, count), ",");
+			writeToDataGridView(msrCartPosDataView, loadFromFile(openPoseFile->FileName, count), SEPARATOR);
 
 		}
 	}
@@ -2278,20 +2369,20 @@ namespace GuiCartTrajGrp {
 		if (this->simulink->IsBusy)
 		{
 			// stop it
-			btnSimulinkStart->Text = "startSimulink";
+			btnSimulinkStart->Text = START_SIMULINK;
 			this->simulink->CancelAsync();
 		}
 		else
 		{
 
-			btnSimulinkStart->Text = "stopSimulink";
+			btnSimulinkStart->Text = STOP_SIMULINK;
 			this->simulink->RunWorkerAsync();
 
 		}
 	}
 
 	private: System::Void btnPIDSave_Click(System::Object^  sender, System::EventArgs^  e) {
-		saveToFile(readFromDataGridView(PIDDataView), "PID.txt");
+		saveToFile(readFromDataGridView(PIDDataView), PID);
 	}
 };
 
