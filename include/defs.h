@@ -69,7 +69,7 @@
 
 #define OPEN 2
 #define CLOSE 1
-#define FORCEERRORTOLERANCE 0.5
+#define FORCEERRORTOLERANCE 0.6
 #define __max_esum_val 1000
 
 #define CALMAT 8

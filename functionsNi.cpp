@@ -68,7 +68,7 @@ void recNi(niVec& recVec, TaskHandle  tsk){
 }
 void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * feedbackForce,float * NiPID, bool & trajFlag){
 	sendVec.currentLimit = command.currentLimit;
-	if ((command.cmd == OPEN && command.position <= 3) || (command.cmd == CLOSE && command.force <= 50)){
+	if ((command.cmd == OPEN && command.position <= 3.2) || (command.cmd == CLOSE && command.force <= 50)){
 		if (command.cmd != lastCmd || command.force != lastForce)
 			e1 = 0, e2 = 0, esum = 0, xhat = 0, xhatp = 0, p = 0, pp = 0, k = 0;
 		//printf("Last command = %d, current Command=%d \n", lastCmd, command.cmd);
@@ -113,11 +113,11 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 			sendVec.cmd = OPEN;
 		if (pidout < 0)
 			sendVec.cmd = CLOSE;
-		if (fabs(e1) > .6 && trajFlag){
+		if (fabs(e1) > FORCEERRORTOLERANCE && trajFlag){
 			trajFlag = false;
 			forceErrorFlag = true;
 		}
-		if (fabs(e1)<.6 && forceErrorFlag){
+		if (fabs(e1)<FORCEERRORTOLERANCE && forceErrorFlag){
 			trajFlag = true;
 			forceErrorFlag = false;
 		}
@@ -125,8 +125,11 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 		//printf("error= %2.5f,esum= %2.5f, control = %2.5f,xhat= %2.5f \n", e1, esum, pidout, xhat);
 	}
 	else{
-		sendVec.force = 2;
-		sendVec.cmd = command.cmd;
+		//sendVec.force = 2;
+		//sendVec.cmd = command.cmd;
+
+		command.cmd == OPEN;
+		command.position = 3.2;
 
 		//printf("force= %2.5f, rec= %2.5f, send = %2.5f \n", sendVec.force, command.force, sendVec.cmd);
 	}
@@ -170,7 +173,6 @@ void stratNi(System::ComponentModel::BackgroundWorker^ workerNi, niVec & recVec,
 	{   
 		begin_time = clock();
 		recNi(recVec,tsk);
-		//printf("position:\t%2.5f, Fx:\t%2.5f, Fy:\t%2.5f, Fz:\t%2.5f\n", recVec.position, recVec.fX, recVec.fY, recVec.fZ);
 		doCmd(command, recVec, sendVec, temp, feedbackForce, NiPID, trajFlag);
 		sendNi(sendVec);
 		workerNi->ReportProgress(0);

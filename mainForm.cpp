@@ -348,6 +348,13 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->lblTrackX = (gcnew System::Windows::Forms::Label());
 			this->lblTrackA = (gcnew System::Windows::Forms::Label());
 			this->msrCartPosDataView = (gcnew System::Windows::Forms::DataGridView());
+			this->msrCartPosDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->msrCartPosDataViewOpenClose = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnGo = (gcnew System::Windows::Forms::Button());
 			this->lblSpeed = (gcnew System::Windows::Forms::Label());
 			this->trackBarSpeed = (gcnew System::Windows::Forms::TrackBar());
@@ -370,6 +377,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->lblToolXm = (gcnew System::Windows::Forms::Label());
 			this->btnSaveTool = (gcnew System::Windows::Forms::Button());
 			this->toolDataView = (gcnew System::Windows::Forms::DataGridView());
+			this->toolDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->toolDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnRst = (gcnew System::Windows::Forms::Button());
 			this->btnStartStopNi = (gcnew System::Windows::Forms::Button());
 			this->btnOpenGripper = (gcnew System::Windows::Forms::Button());
@@ -378,6 +391,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->btnStartStopPhidgets = (gcnew System::Windows::Forms::Button());
 			this->grpNi = (gcnew System::Windows::Forms::GroupBox());
 			this->PIDDataView = (gcnew System::Windows::Forms::DataGridView());
+			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKd = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewQ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnPIDSave = (gcnew System::Windows::Forms::Button());
 			this->lblCurrentLabel = (gcnew System::Windows::Forms::Label());
 			this->chkManual = (gcnew System::Windows::Forms::CheckBox());
@@ -395,6 +413,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->grpLoadCells = (gcnew System::Windows::Forms::GroupBox());
 			this->btnSaveClibration = (gcnew System::Windows::Forms::Button());
 			this->calDataView = (gcnew System::Windows::Forms::DataGridView());
+			this->calDataViewLoadCell0 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewLoadCell3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->calDataViewSerialNumber = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->lblFreq = (gcnew System::Windows::Forms::Label());
 			this->lblFreqLabel = (gcnew System::Windows::Forms::Label());
 			this->lblCh3 = (gcnew System::Windows::Forms::Label());
@@ -428,29 +451,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->grpLog = (gcnew System::Windows::Forms::GroupBox());
 			this->grpSimulink = (gcnew System::Windows::Forms::GroupBox());
 			this->btnSimulinkStart = (gcnew System::Windows::Forms::Button());
-			this->toolDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewZ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewB = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewC = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->msrCartPosDataViewOpenClose = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKd = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewQ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->calDataViewLoadCell0 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->calDataViewLoadCell1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->calDataViewLoadCell2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->calDataViewLoadCell3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->calDataViewSerialNumber = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->msrCartPosDataView))->BeginInit();
@@ -770,6 +770,48 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->msrCartPosDataView->Size = System::Drawing::Size(759, 114);
 			this->msrCartPosDataView->TabIndex = 27;
 			// 
+			// msrCartPosDataViewX
+			// 
+			this->msrCartPosDataViewX->HeaderText = L"X (mm)";
+			this->msrCartPosDataViewX->Name = L"msrCartPosDataViewX";
+			this->msrCartPosDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewY
+			// 
+			this->msrCartPosDataViewY->HeaderText = L"Y (mm)";
+			this->msrCartPosDataViewY->Name = L"msrCartPosDataViewY";
+			this->msrCartPosDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewZ
+			// 
+			this->msrCartPosDataViewZ->HeaderText = L"Z (mm)";
+			this->msrCartPosDataViewZ->Name = L"msrCartPosDataViewZ";
+			this->msrCartPosDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewA
+			// 
+			this->msrCartPosDataViewA->HeaderText = L"A (deg)";
+			this->msrCartPosDataViewA->Name = L"msrCartPosDataViewA";
+			this->msrCartPosDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewB
+			// 
+			this->msrCartPosDataViewB->HeaderText = L"B (deg)";
+			this->msrCartPosDataViewB->Name = L"msrCartPosDataViewB";
+			this->msrCartPosDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewC
+			// 
+			this->msrCartPosDataViewC->HeaderText = L"C (deg)";
+			this->msrCartPosDataViewC->Name = L"msrCartPosDataViewC";
+			this->msrCartPosDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// msrCartPosDataViewOpenClose
+			// 
+			this->msrCartPosDataViewOpenClose->HeaderText = L"open/close";
+			this->msrCartPosDataViewOpenClose->Name = L"msrCartPosDataViewOpenClose";
+			this->msrCartPosDataViewOpenClose->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
 			// btnGo
 			// 
 			this->btnGo->Location = System::Drawing::Point(4, 174);
@@ -1001,6 +1043,42 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->toolDataView->Size = System::Drawing::Size(507, 71);
 			this->toolDataView->TabIndex = 53;
 			// 
+			// toolDataViewX
+			// 
+			this->toolDataViewX->HeaderText = L"X (mm)";
+			this->toolDataViewX->Name = L"toolDataViewX";
+			this->toolDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewY
+			// 
+			this->toolDataViewY->HeaderText = L"Y (mm)";
+			this->toolDataViewY->Name = L"toolDataViewY";
+			this->toolDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewZ
+			// 
+			this->toolDataViewZ->HeaderText = L"Z (mm)";
+			this->toolDataViewZ->Name = L"toolDataViewZ";
+			this->toolDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewA
+			// 
+			this->toolDataViewA->HeaderText = L"A (deg)";
+			this->toolDataViewA->Name = L"toolDataViewA";
+			this->toolDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewB
+			// 
+			this->toolDataViewB->HeaderText = L"B (deg)";
+			this->toolDataViewB->Name = L"toolDataViewB";
+			this->toolDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// toolDataViewC
+			// 
+			this->toolDataViewC->HeaderText = L"C (deg)";
+			this->toolDataViewC->Name = L"toolDataViewC";
+			this->toolDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
 			// btnRst
 			// 
 			this->btnRst->Location = System::Drawing::Point(256, 174);
@@ -1114,6 +1192,36 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->PIDDataView->RowTemplate->Height = 28;
 			this->PIDDataView->Size = System::Drawing::Size(313, 51);
 			this->PIDDataView->TabIndex = 72;
+			// 
+			// PIDDataViewLoadCell
+			// 
+			this->PIDDataViewLoadCell->HeaderText = L"Load Cell";
+			this->PIDDataViewLoadCell->Name = L"PIDDataViewLoadCell";
+			this->PIDDataViewLoadCell->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKp
+			// 
+			this->PIDDataViewKp->HeaderText = L"Kp";
+			this->PIDDataViewKp->Name = L"PIDDataViewKp";
+			this->PIDDataViewKp->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKd
+			// 
+			this->PIDDataViewKd->HeaderText = L"Kd";
+			this->PIDDataViewKd->Name = L"PIDDataViewKd";
+			this->PIDDataViewKd->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKi
+			// 
+			this->PIDDataViewKi->HeaderText = L"Ki";
+			this->PIDDataViewKi->Name = L"PIDDataViewKi";
+			this->PIDDataViewKi->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewQ
+			// 
+			this->PIDDataViewQ->HeaderText = L"Q";
+			this->PIDDataViewQ->Name = L"PIDDataViewQ";
+			this->PIDDataViewQ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// btnPIDSave
 			// 
@@ -1330,6 +1438,38 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->calDataView->RowTemplate->Height = 28;
 			this->calDataView->Size = System::Drawing::Size(396, 73);
 			this->calDataView->TabIndex = 70;
+			// 
+			// calDataViewLoadCell0
+			// 
+			this->calDataViewLoadCell0->HeaderText = L"Load Cell 0";
+			this->calDataViewLoadCell0->Name = L"calDataViewLoadCell0";
+			this->calDataViewLoadCell0->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell1
+			// 
+			this->calDataViewLoadCell1->HeaderText = L"Load Cell 1";
+			this->calDataViewLoadCell1->Name = L"calDataViewLoadCell1";
+			this->calDataViewLoadCell1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell2
+			// 
+			this->calDataViewLoadCell2->HeaderText = L"Load Cell 2";
+			this->calDataViewLoadCell2->Name = L"calDataViewLoadCell2";
+			this->calDataViewLoadCell2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewLoadCell3
+			// 
+			this->calDataViewLoadCell3->HeaderText = L"Load Cell 3";
+			this->calDataViewLoadCell3->Name = L"calDataViewLoadCell3";
+			this->calDataViewLoadCell3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// calDataViewSerialNumber
+			// 
+			this->calDataViewSerialNumber->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
+			this->calDataViewSerialNumber->HeaderText = L"Serial Number";
+			this->calDataViewSerialNumber->Name = L"calDataViewSerialNumber";
+			this->calDataViewSerialNumber->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->calDataViewSerialNumber->Width = 79;
 			// 
 			// lblFreq
 			// 
@@ -1646,146 +1786,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->btnSimulinkStart->Text = L"startSimulink";
 			this->btnSimulinkStart->UseVisualStyleBackColor = true;
 			this->btnSimulinkStart->Click += gcnew System::EventHandler(this, &mainForm::btnSimulinkStart_Click);
-			// 
-			// toolDataViewX
-			// 
-			this->toolDataViewX->HeaderText = L"X (mm)";
-			this->toolDataViewX->Name = L"toolDataViewX";
-			this->toolDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// toolDataViewY
-			// 
-			this->toolDataViewY->HeaderText = L"Y (mm)";
-			this->toolDataViewY->Name = L"toolDataViewY";
-			this->toolDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// toolDataViewZ
-			// 
-			this->toolDataViewZ->HeaderText = L"Z (mm)";
-			this->toolDataViewZ->Name = L"toolDataViewZ";
-			this->toolDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// toolDataViewA
-			// 
-			this->toolDataViewA->HeaderText = L"A (deg)";
-			this->toolDataViewA->Name = L"toolDataViewA";
-			this->toolDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// toolDataViewB
-			// 
-			this->toolDataViewB->HeaderText = L"B (deg)";
-			this->toolDataViewB->Name = L"toolDataViewB";
-			this->toolDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// toolDataViewC
-			// 
-			this->toolDataViewC->HeaderText = L"C (deg)";
-			this->toolDataViewC->Name = L"toolDataViewC";
-			this->toolDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewX
-			// 
-			this->msrCartPosDataViewX->HeaderText = L"X (mm)";
-			this->msrCartPosDataViewX->Name = L"msrCartPosDataViewX";
-			this->msrCartPosDataViewX->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewY
-			// 
-			this->msrCartPosDataViewY->HeaderText = L"Y (mm)";
-			this->msrCartPosDataViewY->Name = L"msrCartPosDataViewY";
-			this->msrCartPosDataViewY->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewZ
-			// 
-			this->msrCartPosDataViewZ->HeaderText = L"Z (mm)";
-			this->msrCartPosDataViewZ->Name = L"msrCartPosDataViewZ";
-			this->msrCartPosDataViewZ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewA
-			// 
-			this->msrCartPosDataViewA->HeaderText = L"A (deg)";
-			this->msrCartPosDataViewA->Name = L"msrCartPosDataViewA";
-			this->msrCartPosDataViewA->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewB
-			// 
-			this->msrCartPosDataViewB->HeaderText = L"B (deg)";
-			this->msrCartPosDataViewB->Name = L"msrCartPosDataViewB";
-			this->msrCartPosDataViewB->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewC
-			// 
-			this->msrCartPosDataViewC->HeaderText = L"C (deg)";
-			this->msrCartPosDataViewC->Name = L"msrCartPosDataViewC";
-			this->msrCartPosDataViewC->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// msrCartPosDataViewOpenClose
-			// 
-			this->msrCartPosDataViewOpenClose->HeaderText = L"open/close";
-			this->msrCartPosDataViewOpenClose->Name = L"msrCartPosDataViewOpenClose";
-			this->msrCartPosDataViewOpenClose->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewLoadCell
-			// 
-			this->PIDDataViewLoadCell->HeaderText = L"Load Cell";
-			this->PIDDataViewLoadCell->Name = L"PIDDataViewLoadCell";
-			this->PIDDataViewLoadCell->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKp
-			// 
-			this->PIDDataViewKp->HeaderText = L"Kp";
-			this->PIDDataViewKp->Name = L"PIDDataViewKp";
-			this->PIDDataViewKp->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKd
-			// 
-			this->PIDDataViewKd->HeaderText = L"Kd";
-			this->PIDDataViewKd->Name = L"PIDDataViewKd";
-			this->PIDDataViewKd->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKi
-			// 
-			this->PIDDataViewKi->HeaderText = L"Ki";
-			this->PIDDataViewKi->Name = L"PIDDataViewKi";
-			this->PIDDataViewKi->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewQ
-			// 
-			this->PIDDataViewQ->HeaderText = L"Q";
-			this->PIDDataViewQ->Name = L"PIDDataViewQ";
-			this->PIDDataViewQ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// calDataViewLoadCell0
-			// 
-			this->calDataViewLoadCell0->HeaderText = L"Load Cell 0";
-			this->calDataViewLoadCell0->Name = L"calDataViewLoadCell0";
-			this->calDataViewLoadCell0->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// calDataViewLoadCell1
-			// 
-			this->calDataViewLoadCell1->HeaderText = L"Load Cell 1";
-			this->calDataViewLoadCell1->Name = L"calDataViewLoadCell1";
-			this->calDataViewLoadCell1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// calDataViewLoadCell2
-			// 
-			this->calDataViewLoadCell2->HeaderText = L"Load Cell 2";
-			this->calDataViewLoadCell2->Name = L"calDataViewLoadCell2";
-			this->calDataViewLoadCell2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// calDataViewLoadCell3
-			// 
-			this->calDataViewLoadCell3->HeaderText = L"Load Cell 3";
-			this->calDataViewLoadCell3->Name = L"calDataViewLoadCell3";
-			this->calDataViewLoadCell3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// calDataViewSerialNumber
-			// 
-			this->calDataViewSerialNumber->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
-			this->calDataViewSerialNumber->HeaderText = L"Serial Number";
-			this->calDataViewSerialNumber->Name = L"calDataViewSerialNumber";
-			this->calDataViewSerialNumber->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->calDataViewSerialNumber->Width = 79;
 			// 
 			// mainForm
 			// 
@@ -2122,15 +2122,15 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 					 command.position = Convert::ToDouble(txtMaxPos->Text);
 					 command.force = -Convert::ToDouble(txtMaxForce->Text);
 				 }
-				 else {
-					 if (Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value) > 0) {
-						 command.cmd = OPEN;
-						 command.position = Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value);
-					 }
-					 else {
-						 command.cmd = CLOSE;
-						 command.force = -Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value);
-					 }
+				 else if(j < poseNum){ 
+						 if (Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value) > 0) {
+							 command.cmd = OPEN;
+							 command.position = Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value);
+						 }
+						 else {
+							 command.cmd = CLOSE;
+							 command.force = -Convert::ToDouble(msrCartPosDataView->Rows[j]->Cells[6]->Value);
+						 }			 
 				 }
 				 this->btnOpenGripper->Enabled = this->chkManual->Checked;
 				 this->btnCloseGripper->Enabled = this->chkManual->Checked;
@@ -2138,7 +2138,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 				 this->lblMaxForceLabel->Enabled = this->chkManual->Checked;
 				 this->txtMaxForce->Enabled = this->chkManual->Checked;
 				 this->txtMaxPos->Enabled = this->chkManual->Checked;
-				 //printf("mahyar:%d", command.cmd);
+				 //printf("mahyar:%d", j);
 			 }
 			 void updatePhidgets() {
 				 calMatrix[0] = Convert::ToDouble(calDataView->Rows[0]->Cells[0]->Value);
@@ -2384,6 +2384,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 	private: System::Void btnPIDSave_Click(System::Object^  sender, System::EventArgs^  e) {
 		saveToFile(readFromDataGridView(PIDDataView), PID);
 	}
+
 };
 
 
