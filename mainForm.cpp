@@ -71,7 +71,7 @@ namespace GuiCartTrajGrp {
 	atiVec atiVector;
 	int comPort = 3;
 
-	float NiPID[5];
+	float NiPID[PID_PARAM];
 	float calMatrix[CALMAT];
 	float calibratedPhidgets[LOADCELLS];
 	float ee[CART_COMP], eeRot[FRI_CART_FRM_DIM], toolRot[FRI_CART_FRM_DIM];
@@ -250,18 +250,24 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewZ;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewA;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewB;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  toolDataViewC;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewLoadCell;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKp;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKd;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKi;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewQ;
+
+
+
+
+
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell0;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell1;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell3;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNumber;
-private: System::Windows::Forms::TextBox^  txtErrorTol;
-private: System::Windows::Forms::Label^  lblErrorTolLabel;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewLoadCell;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKp;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKd;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewKi;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewQ;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  PIDDataViewLoadCellErrorTolerance;
+
+
 
 
 
@@ -392,14 +398,7 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->lblPosition = (gcnew System::Windows::Forms::Label());
 			this->btnStartStopPhidgets = (gcnew System::Windows::Forms::Button());
 			this->grpNi = (gcnew System::Windows::Forms::GroupBox());
-			this->txtErrorTol = (gcnew System::Windows::Forms::TextBox());
-			this->lblErrorTolLabel = (gcnew System::Windows::Forms::Label());
 			this->PIDDataView = (gcnew System::Windows::Forms::DataGridView());
-			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKd = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewKi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->PIDDataViewQ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnPIDSave = (gcnew System::Windows::Forms::Button());
 			this->lblCurrentLabel = (gcnew System::Windows::Forms::Label());
 			this->chkManual = (gcnew System::Windows::Forms::CheckBox());
@@ -455,6 +454,12 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->grpLog = (gcnew System::Windows::Forms::GroupBox());
 			this->grpSimulink = (gcnew System::Windows::Forms::GroupBox());
 			this->btnSimulinkStart = (gcnew System::Windows::Forms::Button());
+			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKd = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewKi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewQ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->PIDDataViewLoadCellErrorTolerance = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->msrCartPosDataView))->BeginInit();
@@ -1149,8 +1154,6 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			// 
 			// grpNi
 			// 
-			this->grpNi->Controls->Add(this->txtErrorTol);
-			this->grpNi->Controls->Add(this->lblErrorTolLabel);
 			this->grpNi->Controls->Add(this->PIDDataView);
 			this->grpNi->Controls->Add(this->btnPIDSave);
 			this->grpNi->Controls->Add(this->lblCurrentLabel);
@@ -1176,24 +1179,6 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->grpNi->TabStop = false;
 			this->grpNi->Text = L"Gripper";
 			// 
-			// txtErrorTol
-			// 
-			this->txtErrorTol->Location = System::Drawing::Point(250, 46);
-			this->txtErrorTol->Name = L"txtErrorTol";
-			this->txtErrorTol->Size = System::Drawing::Size(40, 20);
-			this->txtErrorTol->TabIndex = 95;
-			this->txtErrorTol->Text = L"0.6";
-			// 
-			// lblErrorTolLabel
-			// 
-			this->lblErrorTolLabel->AutoSize = true;
-			this->lblErrorTolLabel->Location = System::Drawing::Point(201, 49);
-			this->lblErrorTolLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->lblErrorTolLabel->Name = L"lblErrorTolLabel";
-			this->lblErrorTolLabel->Size = System::Drawing::Size(44, 13);
-			this->lblErrorTolLabel->TabIndex = 94;
-			this->lblErrorTolLabel->Text = L"ErrorTol";
-			// 
 			// PIDDataView
 			// 
 			this->PIDDataView->AllowUserToAddRows = false;
@@ -1205,9 +1190,9 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->PIDDataView->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
 			this->PIDDataView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->PIDDataView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->PIDDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+			this->PIDDataView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
 				this->PIDDataViewLoadCell,
-					this->PIDDataViewKp, this->PIDDataViewKd, this->PIDDataViewKi, this->PIDDataViewQ
+					this->PIDDataViewKp, this->PIDDataViewKd, this->PIDDataViewKi, this->PIDDataViewQ, this->PIDDataViewLoadCellErrorTolerance
 			});
 			this->PIDDataView->Location = System::Drawing::Point(90, 92);
 			this->PIDDataView->Margin = System::Windows::Forms::Padding(2);
@@ -1216,36 +1201,6 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->PIDDataView->RowTemplate->Height = 28;
 			this->PIDDataView->Size = System::Drawing::Size(313, 51);
 			this->PIDDataView->TabIndex = 72;
-			// 
-			// PIDDataViewLoadCell
-			// 
-			this->PIDDataViewLoadCell->HeaderText = L"Load Cell";
-			this->PIDDataViewLoadCell->Name = L"PIDDataViewLoadCell";
-			this->PIDDataViewLoadCell->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKp
-			// 
-			this->PIDDataViewKp->HeaderText = L"Kp";
-			this->PIDDataViewKp->Name = L"PIDDataViewKp";
-			this->PIDDataViewKp->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKd
-			// 
-			this->PIDDataViewKd->HeaderText = L"Kd";
-			this->PIDDataViewKd->Name = L"PIDDataViewKd";
-			this->PIDDataViewKd->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewKi
-			// 
-			this->PIDDataViewKi->HeaderText = L"Ki";
-			this->PIDDataViewKi->Name = L"PIDDataViewKi";
-			this->PIDDataViewKi->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
-			// PIDDataViewQ
-			// 
-			this->PIDDataViewQ->HeaderText = L"Q";
-			this->PIDDataViewQ->Name = L"PIDDataViewQ";
-			this->PIDDataViewQ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// btnPIDSave
 			// 
@@ -1811,6 +1766,41 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 			this->btnSimulinkStart->UseVisualStyleBackColor = true;
 			this->btnSimulinkStart->Click += gcnew System::EventHandler(this, &mainForm::btnSimulinkStart_Click);
 			// 
+			// PIDDataViewLoadCell
+			// 
+			this->PIDDataViewLoadCell->HeaderText = L"Load Cell";
+			this->PIDDataViewLoadCell->Name = L"PIDDataViewLoadCell";
+			this->PIDDataViewLoadCell->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKp
+			// 
+			this->PIDDataViewKp->HeaderText = L"Kp";
+			this->PIDDataViewKp->Name = L"PIDDataViewKp";
+			this->PIDDataViewKp->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKd
+			// 
+			this->PIDDataViewKd->HeaderText = L"Kd";
+			this->PIDDataViewKd->Name = L"PIDDataViewKd";
+			this->PIDDataViewKd->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewKi
+			// 
+			this->PIDDataViewKi->HeaderText = L"Ki";
+			this->PIDDataViewKi->Name = L"PIDDataViewKi";
+			this->PIDDataViewKi->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewQ
+			// 
+			this->PIDDataViewQ->HeaderText = L"Q";
+			this->PIDDataViewQ->Name = L"PIDDataViewQ";
+			this->PIDDataViewQ->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// PIDDataViewLoadCellErrorTolerance
+			// 
+			this->PIDDataViewLoadCellErrorTolerance->HeaderText = L"Error Tolerance";
+			this->PIDDataViewLoadCellErrorTolerance->Name = L"PIDDataViewLoadCellErrorTolerance";
+			// 
 			// mainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -2139,9 +2129,9 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 				 NiPID[2] = Convert::ToDouble(PIDDataView->Rows[0]->Cells[2]->Value);
 				 NiPID[3] = Convert::ToDouble(PIDDataView->Rows[0]->Cells[3]->Value);
 				 NiPID[4] = Convert::ToDouble(PIDDataView->Rows[0]->Cells[4]->Value);
+				 NiPID[5] = Convert::ToDouble(PIDDataView->Rows[0]->Cells[5]->Value);
 
 				 command.currentLimit = Convert::ToInt16(trackBarCurrent->Value);
-				 command.errorTolerance = Convert::ToDouble(txtErrorTol->Text);
 
 				 if (this->chkManual->Checked) {
 					 command.position = Convert::ToDouble(txtMaxPos->Text);
@@ -2163,7 +2153,7 @@ private: System::Windows::Forms::Label^  lblErrorTolLabel;
 				 this->lblMaxForceLabel->Enabled = this->chkManual->Checked;
 				 this->txtMaxForce->Enabled = this->chkManual->Checked;
 				 this->txtMaxPos->Enabled = this->chkManual->Checked;
-				 //printf("mahyar:%d", j);
+				 //printf("mahyar:%f", command.force);
 			 }
 			 void updatePhidgets() {
 				 calMatrix[0] = Convert::ToDouble(calDataView->Rows[0]->Cells[0]->Value);

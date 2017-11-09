@@ -113,11 +113,11 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 			sendVec.cmd = OPEN;
 		if (pidout < 0)
 			sendVec.cmd = CLOSE;
-		if (fabs(e1) > command.errorTolerance && trajFlag){
+		if (fabs(e1) > NiPID[5] && trajFlag){
 			trajFlag = false;
 			forceErrorFlag = true;
 		}
-		if (fabs(e1)< command.errorTolerance && forceErrorFlag){
+		if (fabs(e1)< NiPID[5] && forceErrorFlag){
 			trajFlag = true;
 			forceErrorFlag = false;
 		}
@@ -125,11 +125,12 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 		//printf("error= %2.5f,esum= %2.5f, control = %2.5f,xhat= %2.5f \n", e1, esum, pidout, xhat);
 	}
 	else{
-		//sendVec.force = MAX_FORCE_VAL;
-		//sendVec.cmd = command.cmd;
-
-		command.cmd == OPEN;
+		sendVec.force = MIN_FORCE_VAL;
 		command.position = MAX_POSITION_VAL;
+		sendVec.cmd = command.cmd;
+
+		//command.cmd == OPEN;
+		
 
 		//printf("force= %2.5f, rec= %2.5f, send = %2.5f \n", sendVec.force, command.force, sendVec.cmd);
 	}

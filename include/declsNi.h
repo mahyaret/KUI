@@ -43,6 +43,5 @@ struct niVec{
 	float position;
 	int currentLimit;
 	float dt;
-	float errorTolerance;
 };
 

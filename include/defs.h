@@ -70,8 +70,10 @@
 #define OPEN 2
 #define CLOSE 1
 #define MAX_ESUM_VAL 1000
+#define PID_PARAM 6
 #define MAX_POSITION_VAL 3.2
 #define MAX_FORCE_VAL 50
+#define MIN_FORCE_VAL 0.001
 
 #define CALMAT 8
 #define LOADCELLS 4
