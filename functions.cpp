@@ -471,8 +471,7 @@ void startFri(System::ComponentModel::BackgroundWorker^ worker, tFriMsrData &msr
 						if (j == poseNum) {
 							trajFlag = false;
 							j = 0;
-						}
-						if (j<poseNum)
+						}else if (j<poseNum)
 							j++;
 					}
 

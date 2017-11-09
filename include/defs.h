@@ -69,8 +69,9 @@
 
 #define OPEN 2
 #define CLOSE 1
-#define FORCEERRORTOLERANCE 0.6
-#define __max_esum_val 1000
+#define MAX_ESUM_VAL 1000
+#define MAX_POSITION_VAL 3.2
+#define MAX_FORCE_VAL 50
 
 #define CALMAT 8
 #define LOADCELLS 4

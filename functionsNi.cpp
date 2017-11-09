@@ -68,7 +68,7 @@ void recNi(niVec& recVec, TaskHandle  tsk){
 }
 void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * feedbackForce,float * NiPID, bool & trajFlag){
 	sendVec.currentLimit = command.currentLimit;
-	if ((command.cmd == OPEN && command.position <= 3.2) || (command.cmd == CLOSE && command.force <= 50)){
+	if ((command.cmd == OPEN && command.position <= MAX_POSITION_VAL) || (command.cmd == CLOSE && command.force <= MAX_FORCE_VAL)){
 		if (command.cmd != lastCmd || command.force != lastForce)
 			e1 = 0, e2 = 0, esum = 0, xhat = 0, xhatp = 0, p = 0, pp = 0, k = 0;
 		//printf("Last command = %d, current Command=%d \n", lastCmd, command.cmd);
@@ -99,10 +99,10 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 		}
 
 		esum += e1;
-		if (esum > __max_esum_val)
-			esum = __max_esum_val;
-		if (esum < -__max_esum_val)
-			esum = -__max_esum_val;
+		if (esum > MAX_ESUM_VAL)
+			esum = MAX_ESUM_VAL;
+		if (esum < -MAX_ESUM_VAL)
+			esum = -MAX_ESUM_VAL;
 		pidout = Kp*e1 + Kd*((e1 - e2) / recVec.dt) + Ki*esum*recVec.dt;
 		if (pidout > 1)
 			pidout = 1;
@@ -113,11 +113,11 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 			sendVec.cmd = OPEN;
 		if (pidout < 0)
 			sendVec.cmd = CLOSE;
-		if (fabs(e1) > FORCEERRORTOLERANCE && trajFlag){
+		if (fabs(e1) > command.errorTolerance && trajFlag){
 			trajFlag = false;
 			forceErrorFlag = true;
 		}
-		if (fabs(e1)<FORCEERRORTOLERANCE && forceErrorFlag){
+		if (fabs(e1)< command.errorTolerance && forceErrorFlag){
 			trajFlag = true;
 			forceErrorFlag = false;
 		}
@@ -125,11 +125,11 @@ void doCmd(niVec command, niVec recVec, niVec & sendVec, float& temp, float * fe
 		//printf("error= %2.5f,esum= %2.5f, control = %2.5f,xhat= %2.5f \n", e1, esum, pidout, xhat);
 	}
 	else{
-		//sendVec.force = 2;
+		//sendVec.force = MAX_FORCE_VAL;
 		//sendVec.cmd = command.cmd;
 
 		command.cmd == OPEN;
-		command.position = 3.2;
+		command.position = MAX_POSITION_VAL;
 
 		//printf("force= %2.5f, rec= %2.5f, send = %2.5f \n", sendVec.force, command.force, sendVec.cmd);
 	}

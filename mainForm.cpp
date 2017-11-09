@@ -260,6 +260,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewLoadCell3;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNumber;
+private: System::Windows::Forms::TextBox^  txtErrorTol;
+private: System::Windows::Forms::Label^  lblErrorTolLabel;
 
 
 
@@ -390,6 +392,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->lblPosition = (gcnew System::Windows::Forms::Label());
 			this->btnStartStopPhidgets = (gcnew System::Windows::Forms::Button());
 			this->grpNi = (gcnew System::Windows::Forms::GroupBox());
+			this->txtErrorTol = (gcnew System::Windows::Forms::TextBox());
+			this->lblErrorTolLabel = (gcnew System::Windows::Forms::Label());
 			this->PIDDataView = (gcnew System::Windows::Forms::DataGridView());
 			this->PIDDataViewLoadCell = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->PIDDataViewKp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -1145,6 +1149,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// 
 			// grpNi
 			// 
+			this->grpNi->Controls->Add(this->txtErrorTol);
+			this->grpNi->Controls->Add(this->lblErrorTolLabel);
 			this->grpNi->Controls->Add(this->PIDDataView);
 			this->grpNi->Controls->Add(this->btnPIDSave);
 			this->grpNi->Controls->Add(this->lblCurrentLabel);
@@ -1169,6 +1175,24 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->grpNi->TabIndex = 60;
 			this->grpNi->TabStop = false;
 			this->grpNi->Text = L"Gripper";
+			// 
+			// txtErrorTol
+			// 
+			this->txtErrorTol->Location = System::Drawing::Point(250, 46);
+			this->txtErrorTol->Name = L"txtErrorTol";
+			this->txtErrorTol->Size = System::Drawing::Size(40, 20);
+			this->txtErrorTol->TabIndex = 95;
+			this->txtErrorTol->Text = L"0.6";
+			// 
+			// lblErrorTolLabel
+			// 
+			this->lblErrorTolLabel->AutoSize = true;
+			this->lblErrorTolLabel->Location = System::Drawing::Point(201, 49);
+			this->lblErrorTolLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->lblErrorTolLabel->Name = L"lblErrorTolLabel";
+			this->lblErrorTolLabel->Size = System::Drawing::Size(44, 13);
+			this->lblErrorTolLabel->TabIndex = 94;
+			this->lblErrorTolLabel->Text = L"ErrorTol";
 			// 
 			// PIDDataView
 			// 
@@ -1268,7 +1292,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// txtMaxPos
 			// 
 			this->txtMaxPos->Enabled = false;
-			this->txtMaxPos->Location = System::Drawing::Point(168, 44);
+			this->txtMaxPos->Location = System::Drawing::Point(146, 44);
 			this->txtMaxPos->Name = L"txtMaxPos";
 			this->txtMaxPos->Size = System::Drawing::Size(40, 20);
 			this->txtMaxPos->TabIndex = 83;
@@ -1278,7 +1302,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// 
 			this->lblMaxPosLabel->AutoSize = true;
 			this->lblMaxPosLabel->Enabled = false;
-			this->lblMaxPosLabel->Location = System::Drawing::Point(109, 47);
+			this->lblMaxPosLabel->Location = System::Drawing::Point(87, 47);
 			this->lblMaxPosLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lblMaxPosLabel->Name = L"lblMaxPosLabel";
 			this->lblMaxPosLabel->Size = System::Drawing::Size(45, 13);
@@ -1288,7 +1312,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// txtMaxForce
 			// 
 			this->txtMaxForce->Enabled = false;
-			this->txtMaxForce->Location = System::Drawing::Point(168, 67);
+			this->txtMaxForce->Location = System::Drawing::Point(146, 67);
 			this->txtMaxForce->Name = L"txtMaxForce";
 			this->txtMaxForce->Size = System::Drawing::Size(40, 20);
 			this->txtMaxForce->TabIndex = 81;
@@ -1298,7 +1322,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// 
 			this->lblMaxForceLabel->AutoSize = true;
 			this->lblMaxForceLabel->Enabled = false;
-			this->lblMaxForceLabel->Location = System::Drawing::Point(109, 70);
+			this->lblMaxForceLabel->Location = System::Drawing::Point(87, 70);
 			this->lblMaxForceLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lblMaxForceLabel->Name = L"lblMaxForceLabel";
 			this->lblMaxForceLabel->Size = System::Drawing::Size(54, 13);
@@ -1602,7 +1626,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			this->txtCom->Name = L"txtCom";
 			this->txtCom->Size = System::Drawing::Size(40, 20);
 			this->txtCom->TabIndex = 79;
-			this->txtCom->Text = L"4";
+			this->txtCom->Text = L"3";
 			// 
 			// lblComLabel
 			// 
@@ -2117,6 +2141,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 				 NiPID[4] = Convert::ToDouble(PIDDataView->Rows[0]->Cells[4]->Value);
 
 				 command.currentLimit = Convert::ToInt16(trackBarCurrent->Value);
+				 command.errorTolerance = Convert::ToDouble(txtErrorTol->Text);
 
 				 if (this->chkManual->Checked) {
 					 command.position = Convert::ToDouble(txtMaxPos->Text);
@@ -2332,14 +2357,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  calDataViewSerialNu
 			// stop it
 			killAti(comPort);
 			btnStartATI->Text = START_ATI;
-			btnBias->Enabled = TRUE;
+			btnBias->Enabled = true;
 			this->atiSensor->CancelAsync();
 		}
 		else
 		{
 
 			btnStartATI->Text = STOP_ATI;
-			btnBias->Enabled = FALSE;
+			btnBias->Enabled = false;
 			this->atiSensor->RunWorkerAsync();
 
 		}
