@@ -8,13 +8,13 @@ To compile the code, you need the following libraries:
 - Phidgets21 Libraries
 # Wiki
 - Get started here:
-https://github.com/mahyaret/KUKA-UI/wiki/Get-Started
+https://github.com/mahyaret/KUI/wiki/Get-Started
 - Check the Wiki page for understanding functions details:
-https://github.com/mahyaret/KUKA-UI/wiki
+https://github.com/mahyaret/KUI/wiki
 # News and Updates
 http://www.etedal.net/p/kuka.html
 # YouTube
 - Watch this short video to see how the program works: 
 https://youtu.be/2uZ6xMaOPbs
 - Watch this short video to see some of the features of the program:
-https://www.youtube.com/watch?v=vEYGTlQS7Z0
+https://youtu.be/vEYGTlQS7Z0
