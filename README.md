@@ -22,3 +22,16 @@ http://www.etedal.net/p/kuka.html
 https://youtu.be/2uZ6xMaOPbs
 - Watch this short video to see some of the features of the program:
 https://youtu.be/vEYGTlQS7Z0
+
+# Citation
+```
+@article{abdeetedal2019open,
+  title={An open-source integration platform for multiple peripheral modules with Kuka robots},
+  author={Abdeetedal, Mahyar and Kermani, Mehrdad R},
+  journal={CIRP Journal of Manufacturing Science and Technology},
+  volume={27},
+  pages={46--55},
+  year={2019},
+  publisher={Elsevier}
+}
+```
